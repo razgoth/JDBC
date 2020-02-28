@@ -30,9 +30,10 @@ public class seeder {
             FName = faker.name().firstName();
             LName = faker.name().lastName();
             Email = faker.internet().emailAddress();
-            IsActive = faker.job().title();
-            //"insert into tbl_user(Ssn, FName, LName, Email, IsActive) values(" +Ssn +FName+","+LName+"," +Email+","+IsActive+");"
-            PreparedStatement stat = ConnectionHelper.createPostgresConnection().prepareStatement("insert into tbl_user(Ssn, FName, LName, Email, IsActive) values(" + Ssn +FName+","+LName+"," +Email+","+IsActive+");");
+            IsActive = faker.;
+           //"insert into tbl_user(Ssn, FName, LName, Email, IsActive) values(" +Ssn +FName+","+LName+"," +Email+","+IsActive+");"
+            PreparedStatement stat = ConnectionHelper.createPostgresConnection().prepareStatement("insert into tbl_user(Ssn, FName, LName, Email, IsActive) values('"+Ssn+
+                    "', '"+FName+"', '"+LName+"', '"+Email+"', '"+IsActive+"')");
             stat.executeUpdate();
             System.out.println("input inserted ");}
     }

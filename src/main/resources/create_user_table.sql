@@ -1,1 +1,1 @@
-CREATE TABLE tbl_user(ID SERIAL NOT NULL, Ssn varchar(20), FName varchar(50), LName varchar(50), Email varchar(70), IsActive varchar (10), PRIMARY KEY(ID));
+CREATE TABLE tbl_user(ID SERIAL NOT NULL, Ssn varchar(20), FName varchar(50), LName varchar(50), Email varchar(70), IsActive varchar (100), PRIMARY KEY(ID));
