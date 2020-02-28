@@ -13,25 +13,25 @@ public class JDBCTestDriver {
     private static int EXIT_FAILURE = 1;
 
     public static void main(String[] args) throws SQLException {
-        Connection c = null;
-        Statement stmt = null;
-        ResultSet rs = null;
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet result = null;
         try {
             Class.forName(DRIVER_CLASS);
-            c = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
             System.out.println("connected");
-            stmt = c.createStatement();
+            statement = connection.createStatement();
 
-                   rs = stmt.executeQuery("SELECT 15 AS retval;");
+            result = statement.executeQuery("SELECT 15 AS retval;");
 
-            while (rs.next()) {
-                String ssn = rs.getString("retval");
-                System.out.println(ssn);
+            while (result.next()) {
+                String table = result.getString("retval");
+                System.out.println(table);
 
             }
-            rs.close();
-            stmt.close();
-            c.close();
+            result.close();
+            statement.close();
+            connection.close();
 
 
         } catch (Exception e) {

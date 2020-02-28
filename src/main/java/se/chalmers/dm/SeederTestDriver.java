@@ -10,7 +10,7 @@ public class SeederTestDriver {
     // IMPORTANT: Do NOT change this code, just uncomment it!
     public static void main(String[] args) throws Exception {
         // Faker faker = new Faker();
-         Connection connection = ConnectionHelper.createPostgresConnection();
+        // Connection connection = ConnectionHelper.createPostgresConnection();
         // Random random = new Random();
         // Seeder seeder = new Seeder(faker, connection, random);
         // System.out.println("Creating user table");

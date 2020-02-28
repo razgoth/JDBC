@@ -15,6 +15,7 @@ public class ConnectionHelper {
         try {
             Class.forName(DRIVER_CLASS);
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            System.out.println("it worked: connected.");
         } catch (Exception e) {
             System.out.println("Connection Failed: " + e.getLocalizedMessage());
         }
