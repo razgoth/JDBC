@@ -10,13 +10,13 @@ public class SeederTestDriver {
     // IMPORTANT: Do NOT change this code, just uncomment it!
     public static void main(String[] args) throws Exception {
         // Faker faker = new Faker();
-        // Connection connection = ConnectionHelper.createPostgresConnection();
+         Connection connection = ConnectionHelper.createPostgresConnection();
         // Random random = new Random();
         // Seeder seeder = new Seeder(faker, connection, random);
         // System.out.println("Creating user table");
-         seeder.createUserTable();
+        // seeder.createUserTable();
         // System.out.println("Inserting fake users");
-        // seeder.insertFakeUsers(12);
+         seeder.insertFakeUsers(12);
         // System.out.println("Creating web page table");
         // seeder.createWebPageTable();
         // System.out.println("Inserting fake users with webpage");
